@@ -1,0 +1,24 @@
+<table *ngIf="Users && Users.length > 0">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000000;">Serial</th>
+      <th style="border:1px solid #000000;">Id</th>
+      <th style="border:1px solid #000000;">Names</th>
+      <th style="border:1px solid #000000;">Last names</th>
+      <th style="border:1px solid #000000;">NickName</th>
+      <th style="border:1px solid #000000;">Password</th>
+      <th style="border:1px solid #000000;">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users; let i = index">
+      <td style="border:1px solid #000000;">{{i+1}}</td>
+      <td style="border:1px solid #000000;">{{user.user_id}}</td>
+      <td style="border:1px solid #000000;">{{user.user_names}}</td>
+      <td style="border:1px solid #000000;">{{user.user_surnames}}</td>
+      <td style="border:1px solid #000000;">{{user.user_nick}}</td>
+      <td style="border:1px solid #000000;">{{user.passwd}}</td>
+      <td style="border:1px solid #000000;">{{user.userEmail}}</td>
+    </tr>
+  </tbody>
+</table>
